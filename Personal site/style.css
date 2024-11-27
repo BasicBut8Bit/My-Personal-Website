@@ -1,0 +1,100 @@
+/* Ensure the game container takes up the full height */
+.game-container {
+  position: relative;
+  min-height: 100vh; /* Full-screen height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack elements vertically */
+  overflow: hidden;
+  background: #5e9dfd; 
+}
+
+/* Sky Section */
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+}
+
+/* Clouds */
+.cloud {
+  width: 120px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation: float 10s infinite linear;
+}
+
+.cloud.small {
+  width: 80px;
+  height: 40px;
+  top: 50px;
+  left: 30%;
+}
+
+.cloud:nth-child(1) { top: 30px; left: 10%; }
+.cloud:nth-child(2) { top: 80px; left: 60%; }
+
+/* Floating animation for clouds */
+@keyframes float {
+  from { transform: translateX(-10%); }
+  to { transform: translateX(110%); }
+}
+
+/* Title Section */
+.title-screen {
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 20px;
+}
+
+.game-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+}
+
+.subtitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Main Content Styling */
+.main-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px; /* Limit max size */
+}
+
+/* Buttons/Links */
+a.nes-btn {
+  margin: 10px;
+  display: inline-block;
+}
+
+/* Ground Section */
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background: url('https://lh3.googleusercontent.com/pw/AP1GczMXVu2kY02WN-4JwNh5Q91rCvT8ktb_SpwabQ6C6i6-yT_SLdgunI9DI9ZZfu1Y1HxWzFAFaEJ0HRJyDyL82nWfmsOCbbGnI9cox172-eT8pDZ5g7k=w2400') no-repeat center center fixed;;
+  z-index: 0;
+}
+
+
+
